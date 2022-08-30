@@ -39,7 +39,7 @@
     align-items: center;
     background-color: lightslategray;
     color: white;
-    width: 400px;
+    width: 300px;
     height: 5rem;
     border-radius: 15px 15px 0 0;
 }
@@ -63,8 +63,8 @@
 #gameBoard {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    height: 400px;
-    width: 400px;
+    height: 300px;
+    width: 300px;
 }
 
 .gameSquare {
@@ -81,7 +81,7 @@
 #gameZoneBottom {
     background-color: lightslategray;
     display: flex;
-    width: 400px;
+    width: 300px;
     height: 2rem;
     border-radius: 0 0 15px 15px;
     color: white;
@@ -93,6 +93,7 @@
 #footer {
     background-color: lightcoral;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
