@@ -69,10 +69,13 @@
 
 .gameSquare {
     display: flex;
+    flex-direction: column;
     align-items: stretch;
-    /* height: 10px; */
+    justify-content: center;
+    align-content: center;
     background-color: white;
     border: black solid;
+    font-size: 4rem;
 }
 
 #gameZoneBottom {

@@ -1,1 +1,1 @@
-console.log("test");
+(()=>{"use strict";var e={gameBoard:[" "," "," "," "," "," "," "," "," "],turn:"X",hasWinner:!1};function t(){for(let t=0;t<e.gameBoard.length;t++)e.gameBoard[t]=`${t}`;e.hasWinner=!1,function(){let t=document.querySelectorAll(".gameSquare");for(let n=0;n<9;n++)t[n].innerHTML=e.gameBoard[n]}()}({init:function(){this.cacheItems(),this.bindEvents()},cacheItems:function(){this.el=document.getElementById("main"),this.resetBtn=this.el.querySelector("#gameZoneBottom")},bindEvents:function(){this.resetBtn.onclick=t}}).init()})();
