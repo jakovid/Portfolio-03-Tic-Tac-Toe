@@ -4,7 +4,7 @@
 
 #main {
     display: grid;
-    grid-template-rows: 2fr 10fr 1fr;
+    grid-template-rows: 2fr 14fr 1fr;
     height: 100vh;
 }
 
@@ -17,12 +17,47 @@
     align-items: center;
 }
 
+#headerTitle {
+    font-size: 2rem;
+}
+
+#headerSubTitle {
+    font-size: 1.25rem;
+}
+
 #gameZone {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+    background-color: lightgoldenrodyellow;
+}
+
+#gameZoneTop {
+    display: grid;
+    align-items: center;
+    background-color: lightslategray;
+    color: white;
+    width: 400px;
+    height: 5rem;
+    border-radius: 15px 15px 0 0;
+}
+
+#announcements {
+    font-size: 2rem;
+}
+
+#symbolSelectBox {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+
+#symbolSelectBox>button {
+    font-size: 1.5rem;
+    width: 6rem;
+    border-radius: 15px;
 }
 
 #gameBoard {
@@ -36,8 +71,23 @@
     display: flex;
     align-items: stretch;
     /* height: 10px; */
-    background-color: lightcoral;
+    background-color: white;
     border: black solid;
+}
+
+#gameZoneBottom {
+    background-color: lightslategray;
+    display: flex;
+    width: 400px;
+    height: 2rem;
+    border-radius: 0 0 15px 15px;
+    color: white;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+}
+
+#restart {
 }
 
 #footer {
