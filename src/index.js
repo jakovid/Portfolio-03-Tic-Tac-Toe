@@ -2,6 +2,7 @@ import { resetGame } from "./modules/resetGame";
 import { gameInfo } from "./modules/gameInfo";
 import { changeTurn } from "./modules/changeTurn";
 import { renderBoard } from "./modules/renderBoard";
+import { showTurn } from "./modules/showTurn";
 
 (function(){
     var ticTacToe = {
@@ -20,6 +21,7 @@ import { renderBoard } from "./modules/renderBoard";
                 this.gameSquares[i].addEventListener('click', e => {
                     gameInfo.gameBoard[i] = gameInfo.turn;
                     changeTurn();
+                    showTurn();
                     renderBoard();
                 })
             }
