@@ -5,6 +5,7 @@ function resetGame() {
     for (let i=0; i<gameInfo.gameBoard.length; i++) {
         gameInfo.gameBoard[i] = ' ';
     }
+    gameInfo.announcement.innerHTML = 'Select Your Symbol';
     gameInfo.hasWinner = false;
     renderBoard();
 }

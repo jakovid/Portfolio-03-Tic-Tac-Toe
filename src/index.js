@@ -19,6 +19,9 @@ import { showTurn } from "./modules/showTurn";
             this.resetBtn.onclick = resetGame;
             for (let i=0; i<9; i++) {
                 this.gameSquares[i].addEventListener('click', e => {
+                    if (gameInfo.gameBoard[i] != ' ') {
+                        return;
+                    }
                     gameInfo.gameBoard[i] = gameInfo.turn;
                     changeTurn();
                     showTurn();

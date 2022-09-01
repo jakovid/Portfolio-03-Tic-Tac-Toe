@@ -1,7 +1,8 @@
 var gameInfo = {
     gameBoard: [' ',' ',' ',' ',' ',' ',' ',' ',' '],
     turn: 'X',
-    hasWinner: false
+    hasWinner: false,
+    announcement: document.getElementById('announcements')
 };
 
 export { gameInfo };
