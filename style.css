@@ -79,7 +79,7 @@
     height: 100px;
 }
 
-#gameZoneBottom {
+#resetBtn {
     background-color: lightslategray;
     display: flex;
     width: 300px;

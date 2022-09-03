@@ -1,28 +1,18 @@
 (function(){
     var ticTacToe = {
+        winner: false,
+        gameBoard: [['','','']['','','']['','','']],
+        turn: 'X',
         init: function() {
-            this.cacheItems();
-            this.bindEvents();
+            this.cacheDom();
         },
-        cacheItems: function() {
-            this.el = document.getElementById('main');
+        cacheDom: function() {
+            this.el = document.getElementById('gameZone');
+            this.annoucements = this.el.querySelector('#announcements');
+            this.symbolBtns = this.el.querySelectorAll('.symbolBtn');
             this.gameSquares = this.el.querySelectorAll('.gameSquare');
-            this.resetBtn = this.el.querySelector('#gameZoneBottom');
+            this.resetBtn = this.el.querySelector('#resetBtn');
         },
-        bindEvents: function() {
-            this.resetBtn.onclick = resetGame;
-            for (let i=0; i<9; i++) {
-                this.gameSquares[i].addEventListener('click', e => {
-                    if (gameInfo.gameBoard[i] != ' ') {
-                        return;
-                    }
-                    gameInfo.gameBoard[i] = gameInfo.turn;
-                    changeTurn();
-                    showTurn();
-                    renderBoard();
-                })
-            }
-        }
     }
     ticTacToe.init();
 })();
