@@ -1,9 +1,3 @@
-import { resetGame } from "./modules/resetGame";
-import { gameInfo } from "./modules/gameInfo";
-import { changeTurn } from "./modules/changeTurn";
-import { renderBoard } from "./modules/renderBoard";
-import { showTurn } from "./modules/showTurn";
-
 (function(){
     var ticTacToe = {
         init: function() {
