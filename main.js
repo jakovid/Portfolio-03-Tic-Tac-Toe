@@ -18,9 +18,10 @@
             this.opponent = this.el.querySelector('#oppenentSelected');
         },
         bindEvents: function() {
-            for (let i=0; i < this.modeBtns.length; i++) {
-                this.modeBtns[i].addEventListener('click', this.modeSelect);
-            }
+            this.modeBtns.forEach(e => e.addEventListener('click', ticTacToe.modeSelect));
+            this.symbolBtns.forEach(e => e.addEventListener('click', ticTacToe.symbolSelect));
+            this.gameSquares.forEach(e => e.addEventListener('click', ticTacToe.userPick));
+            this.resetBtn.addEventListener('click', ticTacToe.resetGame);
         },
         populateGameBoard: function() {
             for (let i=0; i<9; i++) {
@@ -28,14 +29,28 @@
             };
         },
         userPick: function() {
-
+            if (this.innerHTML === '' && ticTacToe.winner === false) {
+                let index = this.getAttribute('value');
+                ticTacToe.gameBoard[index] = ticTacToe.turn;
+                ticTacToe.populateGameBoard();
+                ticTacToe.switchTurn();
+            }
+            console.log(x);
         },
         symbolSelect: function() {
-
+            ticTacToe.turn = this.value;
+            console.log(ticTacToe.turn);
         },
         modeSelect: function() {
             ticTacToe.mode = this.value;
             ticTacToe.opponent.innerHTML = this.innerHTML;
+        },
+        switchTurn: function() {
+            ticTacToe.turn == 'X' ? ticTacToe.turn = 'O' : ticTacToe.turn = 'X';
+        },
+        resetGame: function() {
+            ticTacToe.gameBoard = ['','','','','','','','',''];
+            ticTacToe.populateGameBoard();
         }
     }
     ticTacToe.init();
