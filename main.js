@@ -10,7 +10,7 @@
         },
         cacheDom: function() {
             this.el = document.getElementById('contentContainer');
-            this.annoucements = this.el.querySelector('.announcements');
+            this.annoucements = this.el.querySelector('#announcements');
             this.modeBtns = this.el.querySelectorAll('.modeBtn');
             this.symbolBtns = this.el.querySelectorAll('.symbolBtn');
             this.gameSquares = this.el.querySelectorAll('.gameSquare');

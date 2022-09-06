@@ -4,7 +4,7 @@
 
 #main {
     display: grid;
-    grid-template-rows: 2fr 14fr 1fr;
+    grid-template-rows: 4fr 14fr 1fr;
     height: 100vh;
 }
 
@@ -18,11 +18,11 @@
 }
 
 #headerTitle {
-    font-size: 2rem;
+    font-size: 4rem;
 }
 
 #headerSubTitle {
-    font-size: 1.25rem;
+    font-size: 2rem;
 }
 
 #contentContainer { 
@@ -69,7 +69,7 @@
     border-radius: 15px 15px 0 0;
 }
 
-.announcements {
+#announcements {
     font-size: 2rem;
 }
 
