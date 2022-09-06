@@ -35,7 +35,6 @@
                 ticTacToe.populateGameBoard();
                 ticTacToe.switchTurn();
             }
-            console.log(x);
         },
         symbolSelect: function() {
             ticTacToe.turn = this.value;
