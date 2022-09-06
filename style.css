@@ -25,6 +25,31 @@
     font-size: 1.25rem;
 }
 
+#contentContainer { 
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+}
+#modeSelectBox {
+    background-color: lightcoral;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    padding: 3rem;
+    text-align: center;
+}
+
+#modeSelectTitle {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.modeBtn {
+    font-size: 1.5rem;
+    border-radius: 15px;
+}
+
 #gameZone {
     display: flex;
     flex-direction: column;
@@ -89,6 +114,27 @@
     font-weight: bold;
     align-items: center;
     justify-content: center;
+}
+
+#rules {
+    background-color: lightcoral;
+    flex-direction: column;
+    display: flex;
+    text-align: center;
+    color: white;
+    justify-content: center;
+    gap: 1rem;
+    padding: 3rem;
+    
+}
+
+#rulesTitle {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#rulesText {
+    font-size: 1.5rem;
 }
 
 #footer {

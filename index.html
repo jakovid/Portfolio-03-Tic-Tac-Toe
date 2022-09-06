@@ -13,37 +13,46 @@
         <div id="headerTitle">Tic Tac Toe</div>
         <div id="headerSubTitle">get three in a row</div>
     </div>
-    <div id="modeSelectBox">
-        <div id="modeSelectTitle">Choose your opponent!</div>
-        <button id="hum">Human</button>
-        <button id="easy">AI (easy)</button>
-        <button id="medium">AI (medium)</button>
-        <button id="hard">AI (hard)</button>
-    </div>
-    <div id="gameZone">
-        <div id="gameZoneTop">
-            <div id="announcements">Select Your Symbol</div>
-            <div id="symbolSelectBox">
-                <button value="X" class='symbolBtn'>X</button>
-                <button value="O" class='symbolBtn'>O</button>
+    <div id="contentContainer">
+        <div id="modeSelectBox">
+            <div id="modeSelectTitle">Human <br> vs <br> 
+                <div id="oppenentSelected">?</div> 
             </div>
+            <button id="hum" class="modeBtn">Human</button>
+            <button id="easy" class="modeBtn">AI (easy)</button>
+            <button id="medium" class="modeBtn">AI (medium)</button>
+            <button id="hard" class="modeBtn">AI (hard)</button>
         </div>
-        <div id="gameZoneMiddle">
-            <div id="gameBoard">
-                <div class="gameSquare" id='r1c1' value='0'></div>
-                <div class="gameSquare" id="r1c2" value='1'></div>
-                <div class="gameSquare" id='r1c3' value='2'></div>
-                <div class="gameSquare" id="r2c1" value='3'></div>
-                <div class="gameSquare" id="r2c2" value='4'></div>
-                <div class="gameSquare" id="r2c3" value='5'></div>
-                <div class="gameSquare" id="r3c1" value='6'></div>
-                <div class="gameSquare" id="r3c2" value='7'></div>
-                <div class="gameSquare" id="r3c3" value='8'></div>
+        <div id="gameZone">
+            <div id="gameZoneTop">
+                <div id="announcements">Select Your Symbol</div>
+                <div id="symbolSelectBox">
+                    <button value="X" class='symbolBtn'>X</button>
+                    <button value="O" class='symbolBtn'>O</button>
+                </div>
             </div>
+            <div id="gameZoneMiddle">
+                <div id="gameBoard">
+                    <div class="gameSquare" id='r1c1' value='0'></div>
+                    <div class="gameSquare" id="r1c2" value='1'></div>
+                    <div class="gameSquare" id='r1c3' value='2'></div>
+                    <div class="gameSquare" id="r2c1" value='3'></div>
+                    <div class="gameSquare" id="r2c2" value='4'></div>
+                    <div class="gameSquare" id="r2c3" value='5'></div>
+                    <div class="gameSquare" id="r3c1" value='6'></div>
+                    <div class="gameSquare" id="r3c2" value='7'></div>
+                    <div class="gameSquare" id="r3c3" value='8'></div>
+                </div>
+            </div>
+            <button id="resetBtn">Reset</button>
         </div>
-        <button id="resetBtn">Reset</button>
+        <div id="rules">
+            <div id="rulesTitle">How to Play</div>
+            <div id="rulesText">The game is simple. 
+                    Players will alternate turns after selecting a square as their own.
+                    The first player to get three symbols in a row wins!</div>
+        </div>
     </div>
-    <div id="rules">Rules:</div>
     <div id="footer">
         <div id="footerTitle">Created by Jacob</div>
     </div>
