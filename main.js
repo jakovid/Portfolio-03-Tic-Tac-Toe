@@ -7,11 +7,10 @@
         init: function() {
             this.cacheDom();
             this.bindEvents();
-            console.log(this.modeBtns)
         },
         cacheDom: function() {
             this.el = document.getElementById('contentContainer');
-            this.annoucements = this.el.querySelector('#announcements');
+            this.annoucements = this.el.querySelector('.announcements');
             this.modeBtns = this.el.querySelectorAll('.modeBtn');
             this.symbolBtns = this.el.querySelectorAll('.symbolBtn');
             this.gameSquares = this.el.querySelectorAll('.gameSquare');
@@ -35,8 +34,8 @@
 
         },
         modeSelect: function() {
-            this.mode = this.value;
-            console.log(this.el)
+            ticTacToe.mode = this.value;
+            ticTacToe.opponent.innerHTML = this.innerHTML;
         }
     }
     ticTacToe.init();
