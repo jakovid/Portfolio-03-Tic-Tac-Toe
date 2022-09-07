@@ -38,7 +38,7 @@
         },
         symbolSelect: function() {
             ticTacToe.turn = this.value;
-            console.log(ticTacToe.turn);
+            ticTacToe.resetGame();
         },
         modeSelect: function() {
             ticTacToe.mode = this.value;
