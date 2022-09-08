@@ -38,12 +38,13 @@
         },
         symbolSelect: function() {
             ticTacToe.turn = this.value;
-            ticTacToe.displayTurn();
             ticTacToe.resetGame();
+            ticTacToe.displayTurn();
         },
         modeSelect: function() {
             ticTacToe.mode = this.value;
             ticTacToe.opponent.innerHTML = this.innerHTML;
+            ticTacToe.resetGame();
         },
         switchTurn: function() {
             ticTacToe.turn == 'X' ? ticTacToe.turn = 'O' : ticTacToe.turn = 'X';
@@ -61,6 +62,10 @@
         },
         resetGame: function() {
             ticTacToe.gameBoard = ['','','','','','','','',''];
+            ticTacToe.winner = false;
+            this.symbolBtns[0].style.backgroundColor = 'lightgray';
+            this.symbolBtns[1].style.backgroundColor = 'lightgray';
+            this.annoucements.innerHTML = 'Select Your Symbol';
             ticTacToe.populateGameBoard();
         }
     }
