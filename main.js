@@ -38,6 +38,7 @@
         },
         symbolSelect: function() {
             ticTacToe.turn = this.value;
+            ticTacToe.displayTurn();
             ticTacToe.resetGame();
         },
         modeSelect: function() {
@@ -46,6 +47,17 @@
         },
         switchTurn: function() {
             ticTacToe.turn == 'X' ? ticTacToe.turn = 'O' : ticTacToe.turn = 'X';
+            ticTacToe.displayTurn();
+        },
+        displayTurn: function() {
+            if (this.symbolBtns[0].value === ticTacToe.turn) {
+                this.symbolBtns[0].style.backgroundColor = 'lightgreen';
+                this.symbolBtns[1].style.backgroundColor = 'lightgray';
+            } else {
+                this.symbolBtns[1].style.backgroundColor = 'lightgreen';
+                this.symbolBtns[0].style.backgroundColor = 'lightgray';
+            }
+            this.annoucements.innerHTML = 'It is ' + this.turn + "'s turn!";
         },
         resetGame: function() {
             ticTacToe.gameBoard = ['','','','','','','','',''];
