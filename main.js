@@ -61,11 +61,9 @@
             this.annoucements.innerHTML = 'It is ' + this.turn + "'s turn!";
         },
         resetGame: function() {
+            console.log('reset!');
             ticTacToe.gameBoard = ['','','','','','','','',''];
             ticTacToe.winner = false;
-            this.symbolBtns[0].style.backgroundColor = 'lightgray';
-            this.symbolBtns[1].style.backgroundColor = 'lightgray';
-            this.annoucements.innerHTML = 'Select Your Symbol';
             ticTacToe.populateGameBoard();
         }
     }
