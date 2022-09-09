@@ -1,6 +1,7 @@
 (function(){
     var ticTacToe = {
         winner: false,
+        winningSymbol: '',
         gameBoard: ['','','','','','','','',''],
         turn: 'X',
         mode: 'human',
@@ -65,6 +66,18 @@
             ticTacToe.gameBoard = ['','','','','','','','',''];
             ticTacToe.winner = false;
             ticTacToe.populateGameBoard();
+        },
+        gameOver: function() {
+            if (ticTacToe.winCheck(0,1,2)
+            || ticTacToe.winCheck(3,4,5)
+            ||)
+        },
+        winCheck: function(s1,s2,s3) {
+            if (ticTacToe.gameBoard[s1] == '') return false;
+            if (ticTacToe.gameBoard[s1] != ticTacToe.gameBoard[s2]) return false;
+            if (ticTacToe.gameBoard[s1] != ticTacToe.gameBoard[s3]) return false;
+            ticTacToe.winningSymbol = ticTacToe.gameBoard[s1];
+            return true;
         }
     }
     ticTacToe.init();
