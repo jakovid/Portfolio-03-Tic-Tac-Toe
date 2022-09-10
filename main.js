@@ -1,7 +1,7 @@
 (function(){
     var ticTacToe = {
         winner: false,
-        winningSymbol: '',
+        winningSymbol: 'Nobody',
         gameBoard: ['','','','','','','','',''],
         turn: 'X',
         mode: 'human',
@@ -76,7 +76,8 @@
             || ticTacToe.winCheck(1,4,7)
             || ticTacToe.winCheck(2,5,8)
             || ticTacToe.winCheck(0,4,8) //check for diagonal win
-            || ticTacToe.winCheck (2,4,6)) {
+            || ticTacToe.winCheck (2,4,6)
+            || ticTacToe.tieCheck()) {
                 ticTacToe.winner = true;
                 this.annoucements.innerHTML = ticTacToe.winningSymbol + ' wins!';
             }
@@ -87,6 +88,9 @@
             if (ticTacToe.gameBoard[s1] != ticTacToe.gameBoard[s3]) return false;
             ticTacToe.winningSymbol = ticTacToe.gameBoard[s1];
             return true;
+        },
+        tieCheck: function() {
+            return (!ticTacToe.gameBoard.includes(''));
         }
     }
     ticTacToe.init();
