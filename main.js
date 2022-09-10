@@ -35,6 +35,7 @@
                 ticTacToe.gameBoard[index] = ticTacToe.turn;
                 ticTacToe.populateGameBoard();
                 ticTacToe.switchTurn();
+                ticTacToe.gameOver();
             }
         },
         symbolSelect: function() {
@@ -68,9 +69,17 @@
             ticTacToe.populateGameBoard();
         },
         gameOver: function() {
-            if (ticTacToe.winCheck(0,1,2)
+            if (ticTacToe.winCheck(0,1,2) // check for row win
             || ticTacToe.winCheck(3,4,5)
-            ||)
+            || ticTacToe.winCheck(6,7,8)
+            || ticTacToe.winCheck(0,3,6) // check for column win
+            || ticTacToe.winCheck(1,4,7)
+            || ticTacToe.winCheck(2,5,8)
+            || ticTacToe.winCheck(0,4,8) //check for diagonal win
+            || ticTacToe.winCheck (2,4,6)) {
+                ticTacToe.winner = true;
+                this.annoucements.innerHTML = ticTacToe.winningSymbol + ' wins!';
+            }
         },
         winCheck: function(s1,s2,s3) {
             if (ticTacToe.gameBoard[s1] == '') return false;
