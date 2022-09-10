@@ -67,6 +67,7 @@
             ticTacToe.gameBoard = ['','','','','','','','',''];
             ticTacToe.winner = false;
             ticTacToe.populateGameBoard();
+            ticTacToe.displayTurn();
         },
         gameOver: function() {
             if (ticTacToe.winCheck(0,1,2) // check for row win
