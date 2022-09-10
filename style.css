@@ -48,6 +48,7 @@
 .modeBtn {
     font-size: 1.5rem;
     border-radius: 15px;
+    padding: 0.5rem;
 }
 
 #gameZone {

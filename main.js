@@ -36,6 +36,7 @@
                 ticTacToe.populateGameBoard();
                 ticTacToe.switchTurn();
                 ticTacToe.gameOver();
+                ticTacToe.easyPick();
             }
         },
         symbolSelect: function() {
@@ -92,6 +93,10 @@
         },
         tieCheck: function() {
             return (!ticTacToe.gameBoard.includes(''));
+        },
+        easyPick: function() {
+            if (ticTacToe.mode != 'easy') return;
+            console.log('easy ai check!');
         }
     }
     ticTacToe.init();
