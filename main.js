@@ -3,6 +3,7 @@
         winner: false,
         winningSymbol: 'Nobody',
         gameBoard: ['','','','','','','','',''],
+        legalMoves: ['0','1','2','3','4','5','6','7','8'],
         turn: 'X',
         mode: 'human',
         init: function() {
@@ -34,6 +35,7 @@
                 let index = this.getAttribute('value');
                 ticTacToe.gameBoard[index] = ticTacToe.turn;
                 ticTacToe.populateGameBoard();
+                ticTacToe.updateLegalMoves(index);
                 ticTacToe.switchTurn();
                 ticTacToe.gameOver();
                 ticTacToe.easyPick();
@@ -62,6 +64,13 @@
                 this.symbolBtns[0].style.backgroundColor = 'lightgray';
             }
             this.annoucements.innerHTML = 'It is ' + this.turn + "'s turn!";
+        },
+        updateLegalMoves: function(square) {
+            let index = ticTacToe.legalMoves.indexOf(square);
+            console.log(square);
+            console.log(index);
+            ticTacToe.legalMoves.splice(index, 1);
+            console.log(ticTacToe.legalMoves);
         },
         resetGame: function() {
             console.log('reset!');
