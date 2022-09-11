@@ -67,14 +67,12 @@
         },
         updateLegalMoves: function(square) {
             let index = ticTacToe.legalMoves.indexOf(square);
-            console.log(square);
-            console.log(index);
             ticTacToe.legalMoves.splice(index, 1);
             console.log(ticTacToe.legalMoves);
         },
         resetGame: function() {
-            console.log('reset!');
             ticTacToe.gameBoard = ['','','','','','','','',''];
+            ticTacToe.legalMoves = ['0','1','2','3','4','5','6','7','8'];
             ticTacToe.winner = false;
             ticTacToe.populateGameBoard();
             ticTacToe.displayTurn();
@@ -105,7 +103,13 @@
         },
         easyPick: function() {
             if (ticTacToe.mode != 'easy') return;
-            console.log('easy ai check!');
+            let max = ticTacToe.legalMoves.length - 1;
+            let computerPick = ticTacToe.legalMoves[Math.floor(Math.random() * (max))];
+            ticTacToe.gameBoard[computerPick] = ticTacToe.turn;
+            ticTacToe.populateGameBoard();
+            ticTacToe.updateLegalMoves(computerPick);
+            ticTacToe.switchTurn();
+            ticTacToe.gameOver();
         }
     }
     ticTacToe.init();
