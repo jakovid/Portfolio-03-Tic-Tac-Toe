@@ -74,6 +74,7 @@
             ticTacToe.gameBoard = ['','','','','','','','',''];
             ticTacToe.legalMoves = ['0','1','2','3','4','5','6','7','8'];
             ticTacToe.winner = false;
+            ticTacToe.winningSymbol = 'Nobody';
             ticTacToe.populateGameBoard();
             ticTacToe.displayTurn();
         },
