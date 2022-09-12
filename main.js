@@ -103,8 +103,7 @@
             return (!ticTacToe.gameBoard.includes(''));
         },
         easyPick: function() {
-            if (ticTacToe.mode != 'easy') return;
-            if (ticTacToe.winner == true) return;
+            if (ticTacToe.mode != 'easy' || ticTacToe.winner == true) return;
             let max = ticTacToe.legalMoves.length - 1;
             let computerPick = ticTacToe.legalMoves[Math.floor(Math.random() * (max))];
             ticTacToe.gameBoard[computerPick] = ticTacToe.turn;
