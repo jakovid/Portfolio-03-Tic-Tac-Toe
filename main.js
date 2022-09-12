@@ -39,6 +39,7 @@
                 ticTacToe.switchTurn();
                 ticTacToe.gameOver();
                 ticTacToe.easyPick();
+                ticTacToe.hardPick();
             }
         },
         symbolSelect: function() {
@@ -111,6 +112,10 @@
             ticTacToe.updateLegalMoves(computerPick);
             ticTacToe.switchTurn();
             ticTacToe.gameOver();
+        },
+        hardPick: function() {
+            if (ticTacToe.mode != 'hard' || ticTacToe.winner == true) return;
+            console.log('hard mode!');
         }
     }
     ticTacToe.init();
