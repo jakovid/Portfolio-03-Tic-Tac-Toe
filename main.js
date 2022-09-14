@@ -115,7 +115,6 @@
         },
         hardPick: function() {
             if (ticTacToe.mode != 'hard' || ticTacToe.winner == true) return;
-            console.log('hard mode active!');
         }
     }
     ticTacToe.init();
