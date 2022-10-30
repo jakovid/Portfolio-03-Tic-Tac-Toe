@@ -18,4 +18,6 @@ Key functions this project utilizes are:
 5) a function to check for a winner or a tied game
 6) a function to display the winner
 7) a function to select an opponents square at random for the easy mode
+
+Coming Soon!
 8) a function that utilizes min max to create an opponent that is unbeatable
